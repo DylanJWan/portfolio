@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    background: #c7d9ed;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 300;
+}
+
+header{
+    margin: 30;
+    background: black;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600; /* text line thickness */
+    color: #c7d9ed; /* text color*/
+
+}
+
+header::after{   /*adds back in header format/background, not sure how*/
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+nav{
+    float: right; /* makes the nav stuff right oriented*/
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; /* gets rid of the list dots *//**/
+}
+
+nav li{
+    display: inline-block; /*orients the nav stuff as a row instead of list*/
+    margin-left: 70px; /*space bw li*/
+    padding-top: 20px; /*space on top of li*/
+    padding-bottom: 20px;
+
+    position: relative; /*idk, related to hover*/
+}
+
+nav a{
+    color: white; /*color of nav items*/
+    text-decoration: none; /*turns off default underline for links*/
+    font-size: 20px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+nav a::before{
+    content: ' ';
+    display: block;
+    height: 5px;
+    background-color: white;
+
+    position: absolute;
+    top: 0; /* putting the rectangles on top*/
+    width: 0%; /*width of rectangle starts at 0 bc not hovering*/
+
+    transition: all ease-in-out 200ms; /*controls speed rectangle on top appears, 200 milliseconds*/
+}
+
+nav a:hover::before{
+    width: 100%; /*width of rectangle after hover*/
+}
+
+.wrap{    /* makes sure text doesn;t hit the edge of the screen */
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.grids{
+   display: grid;
+   grid-template-columns: 1fr 1fr ; /*ratio/fraction of grid width*/
+   grid-gap: 1em;
+}
+
+/* .grids>div{
+    padding: 1em;
+} 
+this is for internal grid margins*/  
+
+.photoGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em; /*space between nested photo grid*/
+}
+
+.responsive-img{ /*makes sure image resizes depending on screen size*/
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+h1{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600; /* text line thickness */
+    color: black; /* text color*/ 
+    font-size: 40; 
+}
+
+h2{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600; /* text line thickness */
+    color: black; /* text color*/ 
+    font-size: 5;  
+}
