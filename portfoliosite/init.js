@@ -69,7 +69,7 @@ function addMarker(lat,lng,title,message){
 }
 
 
-createButtons(25.0330, 121.5654, 'Taipei');
+//createButtons(25.0330, 121.5654, 'Taipei');
 createButtons(35.6762, 139.6503, 'Tokyo');
 createButtons(37.7749, -122.4194, 'San Francisco');
 createButtons(34.0522, -118.2437, 'Los Angeles');
